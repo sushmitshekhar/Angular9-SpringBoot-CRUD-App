@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="jumbotron">
+  <div class="alert alert-success" *ngIf="message">{{message}}</div>
+  <div class="container">
+    <button (click)="addTodo()" class="btn btn-success float-right">Add</button>
+    <h1 class="display-6">Todos</h1>
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Description</th>
+        <th scope="col"></th>
+        <th scope="col">Date</th>
+        <th scope="col"></th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let todo of todos">
+        <th scope="row">{{todo.id}}</th>
+        <td>{{todo.description}}</td>
+        <td></td>
+        <td>{{todo.targetDate|date}}</td>
+        <td></td>
+        <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button></td>
+        <td><button (click)="deleteTodo(todo.id)" class="btn btn-outline-warning">Delete</button> </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

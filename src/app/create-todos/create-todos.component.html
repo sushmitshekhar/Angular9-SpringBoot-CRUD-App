@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="jumbotron">
+  <h1 class="display-8 text-center">Create new/edit Todo</h1>
+  <div class="container">
+
+  <form class="form-signin" (ngSubmit)="!todoForm.invalid && saveTodo()" #todoForm="ngForm">
+    <fieldset class="form-group">
+      <label>Description</label>
+      <input type="text" #description="ngModel" [(ngModel)]="todo.description" class="form-control"
+             name="description" required="required" minlength="5">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label>Target Date</label>
+      <input type="date" #targetDate="ngModel"
+             [ngModel]="todo.targetDate | date:'yyyy-MM-dd' "   (ngModelChange)="todo.targetDate = $event"
+             class="form-control" name="targetDate" required="required" >
+    </fieldset>
+
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>
+</div>

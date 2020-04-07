@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Hello, world!</h1>
+    <p><a class="btn btn-primary btn-lg" (click)="getWelcomeMessage()" role="button" >Welcome Message</a></p>
+    <h3 class="display-8" *ngIf="WelcomeMessage">{{WelcomeMessage}}</h3>
+  </div>
+</div>

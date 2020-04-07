@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#" routerLink="/">INS
+    <img src="../../favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+    NE
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="/welcome">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/todos">Todos</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
