@@ -24,6 +24,5 @@ export class LoginPageComponent implements OnInit {
       this.LoginMessage = false;
       console.log('Error wrong username and password ', this.userName, this.passWord);
     }
-    // console.log(this.username);
   }
 }
